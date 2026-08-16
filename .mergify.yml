@@ -1,0 +1,10 @@
+pull_request_rules:
+  - name: BB app-bound GitHub Actions identity discriminator
+    conditions:
+      - title = BB APPBOUND CHECK Q7N4
+      - check-success = @github-actions/BB_APPBOUND_Q7N4
+      - -label = BB_APPBOUND_MATCHED_Q7N4
+    actions:
+      label:
+        add:
+          - BB_APPBOUND_MATCHED_Q7N4
